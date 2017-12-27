@@ -10,13 +10,8 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	<context:component-scan base-package="com.data.cache" />
-
-	<bean id="unWrapStreetType" class="com.data.cache.UnwrapStreetType" depends-on="cacheManager"/>
-	<bean id="cacheManager" class="com.data.cache.CacheManager">
-		<constructor-arg ref="cache"></constructor-arg>
-	</bean>
-	<bean id="cache" class="com.data.cache.Cache"/>
+	<context:component-scan base-package="com.cache.data" />
+	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/views/jsp/</value>
